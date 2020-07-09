@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -18,4 +19,26 @@ spec:
       - name: myweb-con-name
         image: vimal13/apache-webserver-php
         ports:
+=======
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myweb-rs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myweb-app
+  template:
+    metadata:
+      name: myweb-pod
+      labels:
+        app: myweb-app
+        tier: frontend
+    spec:
+      containers:
+      - name: myweb-con-name
+        image: vimal13/apache-webserver-php
+        ports:
+>>>>>>> 862cbc6... commit
         -  containerPort: 80

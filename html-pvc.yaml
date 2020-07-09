@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -9,4 +10,17 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
+=======
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: html-pv-claim
+  labels:
+    app: html-webserver
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+>>>>>>> 862cbc6... commit
       storage: 500Mi

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: v1
 kind: Pod
 metadata:
@@ -19,3 +20,26 @@ spec:
  
 
 
+=======
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myweb-pod2
+  labels:
+    env: testing
+    region: IN
+spec:
+  containers:
+  - name: myweb-con
+    image: vimal13/apache-webserver-php
+    volumeMounts:
+      - name: web-vol1
+        mountPath: /var/www/html
+  volumes:
+  - name: web-vol1
+    persistentVolumeClaim:
+      claimName: web-pvc1 
+ 
+
+
+>>>>>>> 862cbc6... commit
